@@ -1,24 +1,24 @@
-def textToDecimal(text):
-    liste = []
-    yeni = []
+def textToDecimal(text): # Function that converts a text message to decimal
+    list = []
+    new = []
     for i in text:
-        liste.append(format(ord(i)))
+        list.append(format(ord(i)))
 
-    for j in liste:
+    for j in list:
         if (len(j) == 2):
-            yeni.append("0")
-            yeni.append(j)
+            new.append("0")
+            new.append(j)
         else:
-            yeni.append(j)
-    return ''.join(yeni)
+            new.append(j)
+    return ''.join(new)
 
-def decimalToText(decimal):
-    liste = []
-    yeni = []
+def decimalToText(decimal): # Function that converts a decimal message to text
+    list = []
+    new = []
     i = 0
-    while (i != len(decimal)):
-        liste.append(''.join(decimal[i: (i + 3)]))
+    while(i != len(decimal)):
+        list.append(''.join(decimal[i: (i + 3)]))
         i = i + 3
-    for j in liste:
-        yeni.append(chr(int(j)))
-    return ''.join(yeni)
+    for j in list:
+        new.append(chr(int(j)))
+    return ''.join(new)
